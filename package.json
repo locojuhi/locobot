@@ -1,0 +1,14 @@
+{
+  "name": "locobot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Danny Torres <danny.torresxd@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "tmi.js": "^1.5.0"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  }
+}
