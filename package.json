@@ -10,6 +10,27 @@
     "tmi.js": "^1.5.0"
   },
   "scripts": {
-    "start": "node src/index.js"
+    "dev": "nodemon --exec babel-node src/index.js",
+    "build": "babel ./src --out-dir dist",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.7",
+    "@babel/core": "^7.12.7",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.7",
+    "nodemon": "^2.0.6",
+    "rimraf": "^3.0.2"
+  },
+  "nodemonConfig": {
+    "exec": "yarn run dev",
+    "watch": [
+      "src/*"
+    ],
+    "ignore": [
+      "**/__tests__/**",
+      "*.test.js",
+      "*.spec.js"
+    ]
   }
 }
